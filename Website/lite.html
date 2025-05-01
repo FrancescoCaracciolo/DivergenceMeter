@@ -22,7 +22,7 @@
         <div class="impact-filter">
             <label for="impact-threshold">Minimum Impact Threshold:</label>
             <input type="range" id="impact-threshold" min="0.000001" max="0.5" step="0.000001" value="0.01">
-            <span id="impact-value">0.01</span>
+            <span id="impact-value">0.1</span>
             <!-- Sound toggle -->
             <label for="sound-toggle" class="sound-toggle-label">
                 <input type="checkbox" id="sound-toggle" checked>
@@ -47,13 +47,6 @@
             </tbody>
         </table>
         <!-- Pages -->
-        <div id="pagination-controls" class="pagination-container"></div>
-    </div>
-
-    <!-- Plot -->
-    <div id="divergence-plot" class="plot-container">
-        <h1>Divergence Analysis</h1>
-        <iframe id="plot-frame" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <!-- Footer -->
@@ -61,7 +54,7 @@
         <div class="footer-content">
             <a href="/docs.html" class="footer-link">API Documentation</a>
             <a href="https://github.com/FrancescoCaracciolo/DivergenceMeter" class="footer-link">GitHub Repository</a>
-            <a href="https://divergence.nyarchlinux.moe/lite.html" class="footer-link">Lite Mode</a>
+            <a href="https://divergence.nyarchlinux.moe/" class="footer-link">Full Mode</a>
         </div>
     </footer>
 
@@ -78,10 +71,8 @@
             // Init divergence meter
             initDivergenceMeter(8);
 
-
             // Start fetching and refreshing news
             startNewsRefresh();
-            await fetchPlot();
 
             // Click handler for divergence meter
             document.getElementById('divergence-meter').addEventListener('click', handleDivergenceMeterClick);

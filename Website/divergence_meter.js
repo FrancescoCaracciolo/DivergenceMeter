@@ -64,3 +64,29 @@ function displayDivergenceMeter(divergence, animate = false, enableClickRandom =
         container.onclick = null; // Remove click handler if disabled
     }
 }
+
+/**
+ * Initializes the divergence meter with the given number of digits
+ * and displays the animation GIFs.
+ * @param {number} numDigits - The number of digits to display in the divergence meter
+ */
+function initDivergenceMeter(numDigits) {
+    // Get the container element
+    const container = document.getElementById('divergence-meter');
+    if (!container) {
+        console.error('Divergence meter container not found');
+        return;
+    }
+
+    // Clear any existing children in the container
+    container.innerHTML = '';
+
+    // Create and append the initial image elements with animation GIFs
+    for (let i = 0; i < numDigits; i++) {
+        const img = document.createElement('img');
+        img.alt = `Digit ${i}`;
+        img.className = 'digit';
+        img.src = `images/${i % 2 === 0 ? '11.gif' : '12.gif'}`; // Alternate animation GIFs
+        container.appendChild(img);
+    }
+}
