@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divergence Meter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles -->
+    <div id="particles-js"></div>
+
+    <!-- Divergence Meter -->
+    <div id="divergence-meter" style="cursor: pointer;"></div>
+
+    <!-- News Table -->
+    <div id="news-section">
+        <h1>Worldline Status Report</h1>
+        <!-- Impact filter -->
+        <div class="impact-filter">
+            <label for="impact-threshold">Minimum Impact Threshold:</label>
+            <input type="range" id="impact-threshold" min="0.000001" max="0.5" step="0.000001" value="0.01">
+            <span id="impact-value">0.01</span>
+            <!-- Sound toggle -->
+            <label for="sound-toggle" class="sound-toggle-label">
+                <input type="checkbox" id="sound-toggle" checked>
+                Enable Sound
+            </label>
+        </div>
+        <table class="nixie-table">
+            <thead>
+                <tr>
+                    <!-- Columns always visible -->
+                    <th class="expand-cell"></th>
+                    <th class="col-title">Title</th>
+                    <th class="col-divergence">Divergence</th>
+                    <th class="col-attractor mobile-hide">Attractor</th>
+                    <th class="col-impact">Impact</th>
+                    <th class="col-description mobile-hide">Description</th>
+                    <th class="col-independent-divergence mobile-hide">Independent Divergence</th>
+                </tr>
+            </thead>
+            <tbody id="news-table-body">
+                <!-- JavaScript News -->
+            </tbody>
+        </table>
+        <!-- Pages -->
+        <div id="pagination-controls" class="pagination-container"></div>
+    </div>
+
+    <!-- Plot -->
+    <div id="divergence-plot" class="plot-container">
+        <h1>Divergence Analysis</h1>
+        <iframe id="plot-frame" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="/docs.html" class="footer-link">API Documentation</a>
+            <a href="https://github.com/FrancescoCaracciolo/DivergenceMeter" class="footer-link">GitHub Repository</a>
+        </div>
+    </footer>
+
+    <!-- tsParticles library -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="particles.js"></script>
+    <script src="divergence_meter.js"></script>
+    <script src="news.js"></script>
+    <script>
+        // Initialize everything when the page loads
+        window.onload = async function () {
+            // Fallback value for divergence meter
+            displayDivergenceMeter("1.938454", true);
+
+            // Start fetching and refreshing news
+            startNewsRefresh();
+            await fetchPlot();
+
+            // Click handler for divergence meter
+            document.getElementById('divergence-meter').addEventListener('click', handleDivergenceMeterClick);
+
+        };
+    </script>
+</body>
+
+</html>

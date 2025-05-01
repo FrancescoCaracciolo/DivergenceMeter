@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - Divergence Meter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particles -->
+    <div id="particles-js"></div>
+
+    <!-- API Documentation -->
+    <div class="api-docs-container">
+        <h1>API Documentation</h1>
+
+        <section class="api-section">
+            <h2>Base URL</h2>
+            <p class="api-base-url">http://divergence.nyarchlinux.moe/api</p>
+        </section>
+
+        <section class="api-section">
+            <h2>Endpoints</h2>
+
+            <!-- Get Current Divergence -->
+            <div class="endpoint-card">
+                <h3>Get Current Divergence</h3>
+                <div class="endpoint-header">
+                    <span class="method get">GET</span>
+                    <span class="endpoint-path">/divergence</span>
+                </div>
+                <div class="endpoint-details">
+                    <h4>Response</h4>
+                    <pre class="code-block">
+{
+    "divergence": "1.938454"
+}</pre>
+                </div>
+            </div>
+
+            <!-- Get News -->
+            <div class="endpoint-card">
+                <h3>Get News Articles</h3>
+                <div class="endpoint-header">
+                    <span class="method get">GET</span>
+                    <span class="endpoint-path">/news</span>
+                </div>
+                <div class="endpoint-details">
+                    <h4>Query Parameters</h4>
+                    <table class="params-table">
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>page</td>
+                            <td>integer</td>
+                            <td>1</td>
+                            <td>Page number for pagination</td>
+                        </tr>
+                        <tr>
+                            <td>per_page</td>
+                            <td>integer</td>
+                            <td>10</td>
+                            <td>Number of articles per page</td>
+                        </tr>
+                        <tr>
+                            <td>min_impact</td>
+                            <td>float</td>
+                            <td>None</td>
+                            <td>Minimum impact value to filter by</td>
+                        </tr>
+                        <tr>
+                            <td>max_impact</td>
+                            <td>float</td>
+                            <td>None</td>
+                            <td>Maximum impact value to filter by</td>
+                        </tr>
+                    </table>
+
+                    <h4>Response</h4>
+                    <pre class="code-block">
+{
+    "articles": [
+        {
+            "title": "Article Title",
+            "divergence": "1.938454",
+            "impact": 0.123,
+            "description": "Article description",
+            "independent_divergence": 0.456,
+            "field": "ALPHA"
+        }
+    ],
+    "pagination": {
+        "current_page": 1,
+        "per_page": 10,
+        "total_count": 100,
+        "total_pages": 10
+    },
+    "filters": {
+        "min_impact": 0.01,
+        "max_impact": null
+    }
+}</pre>
+                </div>
+            </div>
+
+            <!-- Get Plot -->
+            <div class="endpoint-card">
+                <h3>Get Divergence Plot</h3>
+                <div class="endpoint-header">
+                    <span class="method get">GET</span>
+                    <span class="endpoint-path">/plot</span>
+                </div>
+                <div class="endpoint-details">
+                    <h4>Response</h4>
+                    <p>Returns an HTML string containing the interactive Plotly plot.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="/" class="footer-link">Back to Divergence Meter</a>
+            <a href="https://github.com/yourusername/DivergenceMeter" class="footer-link">GitHub Repository</a>
+        </div>
+    </footer>
+
+    <!-- tsParticles library -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="particles.js"></script>
+</body>
+
+</html>
