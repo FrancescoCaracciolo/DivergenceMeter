@@ -46,7 +46,71 @@ In Steins;Gate, the divergence is calculated using the difference in gravity val
 Since I don't have the Reading Steiner (at least to my knowledge), and I have not travelled to any worldline yet, the worldline is **estimated** using 
 world news. The news are taken from multiple RSS feeds featuring world news, science news and local news.
 
-**TODO**
+**Spoiler Alert**: The equations you are going to see are based on an interpretation on some equations given in Chaos;Head. The equations per-se are not a spoiler, but searching them might result in spoilers to the Chaos;Head Visual Novel. Also, some of these concepts might be lite spoilers to Steins;Gate VNs.
+
+**Note**: some of the theories here are made up in a way that they are coherent with the SciAdv series.
+
+#### Base Theory
+**Assumption**: every event $e$ has an independent divergence $d$. It is the worldline in which event $e$ has the strongest attractor. Minor events do not have a proper attractor field, but they influence other worldlines.
+For example, in Steins;Gate, the Sern dystopia has an independent divergence of 0. The nearest a worldline is to 0, the quicker it gets to that result.
+
+#### News Analysis
+Each news documents that an event $e$ happened. (The fact that a news has been published, can be considered by itself an event $e$).
+Each news is categorized in an attractor field (for example $\alpha$, $\beta$,...) based on what is the most likely attractor field it beongs to. Also, to each news is given an impact $Im$, that states how impactful is a news for its attractor field, and a Field attraction $Fa$, that states how near it is to the center of the attraction field.
+
+#### Independent Divergence Calculation
+1. In order to calculate the independent divergence of an event $e$, we start from the $Ir2$ equation:
+
+$$Ir2 = fun^{10}*int^{40}$$
+
+That, form Chaos;Head, is the bases equation that causes the world to diverge.
+In the VN, the meaning of this equation is not expalined (except for the fuct tha Ir2 means "eyes are two"). Considering that it is related to the Dirac Sea, a possible explaination is the following:
+- $Ir$ is the Information Rate of the Vacuum region. Higher information rate implies a more complex and dynamic vacuum structure.
+- $fun$ is the Field Uniformity Number. A less uniform field could mean more gradients, potentials, and thus, more energy available for particle creation and interactions. 
+- $int$ is the Interconnectedness of Dirac Sea states. This represents the degree to which the negative energy states within the Dirac Sea are linked or correlated. 
+
+We can assume that the divergence $d$ is the result of a change in the vacuum's Information state, since also gravity is affected.
+Therefore, we might assume that $d \propto Ir$. There exists some constant $k_1$ such that:
+
+$$d = k_1 * Ir2$$
+
+2. We substitute the given expression for $Ir2$ into our definition of $d$:
+
+  $$d = k_1 \cdot (fun^{10} * int^{40})$$
+
+3. Now, we assume the following relations:
+    *   **Impact (`Im`) and Uniformity (`fun`):** A highly impactful news event ($Im$) would disrupt the local vacuum field, decreasing its uniformity ($fun$). We can model this as an inverse relationship:
+
+        $$fun = \frac{C_f}{Im}$$
+
+        Where $C_f$ is a constant.
+    *   **Field Attraction ($Fa$) and Interconnectedness ($int$):** A strong attraction ($Fa$) towards the attractor center implies the event $e$ is creating efficient pathways within the Dirac Sea states along that direction, increasing local interconnectedness ($int$). We model this as a direct relationship:
+
+        $$int = C_i \cdot Fa$$
+
+        Where $C_i$ is a constant
+
+4. We substitute the formulas above in the expression
+    Substitute the expressions for $fun$ and $int$ (from step 3) into the formula for $d$ (from step 2):
+   
+    $$d = k_1 \cdot \left( \left( \frac{C_f}{Im} \right)^{10} \cdot (C_i \cdot Fa)^{40} \right)$$
+
+5. In the end, we simplify the expression combining the constants:
+
+    $$d = k_1 \cdot \left( \frac{C_f^{10}}{Im^{10}} \cdot C_i^{40} \cdot Fa^{40} \right)$$
+
+    $$d = (k_1 \cdot C_f^{10} \cdot C_i^{40}) \cdot \frac{Fa^{40}}{Im^{10}}$$
+
+6. We create a new constant, called Divergence Constant $K_d = k_1 \cdot C_f^{10} \cdot C_i^{40}$
+    The final formula for calculating the independent divergence $d$ is:
+   
+    $$d = K_d \frac{Fa^{40}}{Im^{10}}$$
+
+#### Worldline Update
+In order to estimate the current worldine, we have to analyze news as soon as they arrive, and update the current divergence based on the independent divergence of those news.
+For this purpose, a modified version of Weighted Online Gradient Descent is used.
+
+$$d(t) = d(t-1) - Im * \eta \nabla L(d(t-1))$$
 
 ## Credits
 - [Steins;Gate Wiki](https://steins-gate.fandom.com/wiki/Steins;Gate_Wiki) for some information about divergence
