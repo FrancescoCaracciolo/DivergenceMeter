@@ -42,7 +42,7 @@ The divergence counter refreshes automatically every 15 minutes. <a href="https:
 ![image](https://github.com/user-attachments/assets/abe100b6-4d88-46de-838a-f2a8227be1aa)
 
 ## Worldline calculation
-In Steins;Gate, the divergence is calculated using the difference in gravity value between wordlines.
+In Steins;Gate, the divergence is calculated using the difference in gravity value between worldlines.
 Since I don't have the Reading Steiner (at least to my knowledge), and I have not travelled to any worldline yet, the worldline is **estimated** using 
 world news. The news are taken from multiple RSS feeds featuring world news, science news and local news.
 
@@ -64,7 +64,7 @@ Each news is categorized in an attractor field (for example $\alpha$, $\beta$,..
 $$Ir2 = fun^{10}*int^{40}$$
 
 That, form Chaos;Head, is the bases equation that causes the world to diverge.
-In the VN, the meaning of this equation is not expalined (except for the fuct tha Ir2 means "eyes are two"). Considering that it is related to the Dirac Sea, a possible explaination is the following:
+In the VN, the meaning of this equation is not explained (except for the fuct tha Ir2 means "eyes are two"). Considering that it is related to the Dirac Sea, a possible explaination is the following:
 - $Ir$ is the Information Rate of the Vacuum region. Higher information rate implies a more complex and dynamic vacuum structure.
 - $fun$ is the Field Uniformity Number. A less uniform field could mean more gradients, potentials, and thus, more energy available for particle creation and interactions. 
 - $int$ is the Interconnectedness of Dirac Sea states. This represents the degree to which the negative energy states within the Dirac Sea are linked or correlated. 
@@ -107,13 +107,13 @@ $$d = k_1 * Ir2$$
     $$d = K_d \frac{Fa^{40}}{Im^{10}}$$
 
 #### Worldline Update
-In order to estimate the current worldine, we have to analyze news as soon as they arrive, and update the current divergence based on the independent divergence of those news.
+In order to estimate the current worldline, we have to analyze news as soon as they arrive, and update the current divergence based on the independent divergence of those news.
 For this purpose, a modified version of Weighted Online Gradient Descent is used.
 
 $$d(t) = d(t-1) - Im * \eta \nabla L(d(t-1))$$
 
 ## Credits
-- [Steins;Gate Wiki](https://steins-gate.fandom.com/wiki/Steins;Gate_Wiki) for some information about divergence
+- [Steins;Gate Wiki](https://steins-gate.fandom.com/wiki/Steins;Gate_Wiki) for some informations about divergence
 - [LuqueDaniel/Divergence-Meter](https://github.com/LuqueDaniel/Divergence-Meter/tree/master) for images and gifs
 - [SciAdv Series](https://wikipedia.org/wiki/Science_Adventure) for being peak
 
