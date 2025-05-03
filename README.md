@@ -64,7 +64,7 @@ Each news is categorized in an attractor field (for example $\alpha$, $\beta$,..
 $$Ir2 = fun^{10}*int^{40}$$
 
 That, form Chaos;Head, is the bases equation that causes the world to diverge.
-In the VN, the meaning of this equation is not explained (except for the fuct tha Ir2 means "eyes are two"). Considering that it is related to the Dirac Sea, a possible explaination is the following:
+In the VN, the meaning of this equation is not explained (except for the fact that Ir2 means "eyes are two"). Considering that it is related to the Dirac Sea, a possible explaination is the following:
 - $Ir$ is the Information Rate of the Vacuum region. Higher information rate implies a more complex and dynamic vacuum structure.
 - $fun$ is the Field Uniformity Number. A less uniform field could mean more gradients, potentials, and thus, more energy available for particle creation and interactions. 
 - $int$ is the Interconnectedness of Dirac Sea states. This represents the degree to which the negative energy states within the Dirac Sea are linked or correlated. 
