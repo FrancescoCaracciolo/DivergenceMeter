@@ -1,3 +1,34 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=FrancescoCaracciolo&project=DivergenceMeter&lang=id">Bahasa Indonesia</a>
+      </div>
+    </div>
+  </details>
+</div>
+
 # DivergenceMeter
 Analyzing real-world news, tries to estimate the current divergence value of the world in Steins;Gate terms.
 <div id="divergence-meter" style="cursor: pointer;">
